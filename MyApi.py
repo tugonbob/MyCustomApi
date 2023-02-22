@@ -4,7 +4,7 @@ import time
 
 app = Flask(__name__)
 
-@app.route('/demo', methods=['GET'])
+@app.route('/', methods=['GET'])
 def demo():
     data = {'page': 'Demo', 'message': 'Successfully called api demo', 'timestamp': time.time()}
     json_dump = json.dumps(data)
