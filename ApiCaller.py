@@ -1,4 +1,7 @@
 import requests
 
-response = requests.get("http://ffe3-168-5-42-254.ngrok.io/user/?user=sdjfio")
+with open('NgrokServerUrl.txt', 'r') as f:
+    url = f.read()
+
+response = requests.get(f"{url}")
 print(response.json())
